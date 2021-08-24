@@ -18,9 +18,13 @@ Angular frontend for smarbids application. Current implementation allows doing f
   4. kubectl port-forward service/smartbids-client-service 7080:80
 
 
-# Used Technologies : Angular(template driven forms, reactive forms, interceptors, AuthGate and etc) , rxjs, Material, Bootstrap, Type Script, Java Script, Docker, Kuberntes
+# Used Technologies 
 
-# Backend application can be fount at https://github.com/lmsamarawickrama/smartbids-backend
+Angular(template driven forms, reactive forms, interceptors, AuthGate and etc) , rxjs, Material, Bootstrap, Type Script, Java Script, Docker, Kuberntes
+
+# Backend application repository
+
+https://github.com/lmsamarawickrama/smartbids-backend
 
 # Few screen shots are mentioned below.
 
