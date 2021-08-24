@@ -1,0 +1,17 @@
+table {
+  width: 100%;
+}
+mat-header-cell, mat-cell {
+  justify-content: left;
+}
+.left-text {
+  text-align: left;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+.mat-row.highlighted {
+  background: lightblue;
+}

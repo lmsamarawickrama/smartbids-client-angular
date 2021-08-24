@@ -1,0 +1,51 @@
+<h2 class="mb-5 text-center">Create Item For Auction</h2>
+
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-group">
+    <label>Auction Item with Quantity</label>
+    <input type="text" class="form-control" formControlName="itemDescription">
+    <div *ngIf="getControl.itemDescription.invalid" class="text-danger">
+      <div *ngIf="getControl.itemDescription.errors.required">Item Description is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Minimum Price</label>
+    <input type="text" class="form-control" formControlName="minimumPrice">
+    <div *ngIf="getControl.minimumPrice.touched && getControl.minimumPrice.invalid" class="text-danger">
+      <div *ngIf="getControl.minimumPrice.errors.required">Minimum price is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Start Date</label>
+    <input type="date" class="form-control" formControlName="startDate">
+    <div *ngIf="getControl.startDate.touched && getControl.startDate.invalid" class="text-danger">
+      <div *ngIf="getControl.startDate.errors.required">Start Date is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>End Date</label>
+    <input type="date" class="form-control" formControlName="endDate">
+    <div *ngIf="getControl.endDate.touched && getControl.endDate.invalid" class="text-danger">
+      <div *ngIf="getControl.endDate.errors.required">End Date is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label>Message</label>
+    <textarea type="text" class="form-control" formControlName="message"></textarea>
+  </div>
+
+  <div class="input-group" role="group">
+    <button class="btn btn-danger btn-primary mr-1" type="submit" [disabled]="!itemForm.valid">Submit</button>
+    <button class="btn btn-danger btn-primary mr-1" type=reset>Clear</button>
+    <button class="btn btn-danger btn-primary mr-1" type="submit" [disabled]="itemForm.touched">Edit</button>
+  </div>
+
+  <div class="alert alert-warning" *ngIf="itemForm.submitted && !isSuccessful">
+    Signup failed!<br />{{ errorMessage }}
+  </div>
+</form>

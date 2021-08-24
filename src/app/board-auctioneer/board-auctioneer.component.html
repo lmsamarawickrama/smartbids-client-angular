@@ -1,0 +1,6 @@
+<div class="container">
+  <header class="jumbotron">
+    <app-item-editor (itemSavedEvent)="onItemSaved($event)"></app-item-editor>
+    <app-item-table [eventItemSaved]="eventItemSaved"></app-item-table>
+  </header>
+</div>
